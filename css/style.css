@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Raleway:ital,wght@0,400;1,300&display=swap');
+
 body{
     color: #FFF;
+    font-family: 'Balloo 2', sans-serif;
+}
+
+.bookshelf,
+.plant
+.window,
+.pet,
+.scheduler,
+.notepad,
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Wall styling*/
@@ -15,6 +30,14 @@ body{
 .bookshelf{
     grid-row: -1/-15;
     grid-column: 2/8;
+    position: relative;
+    top: 35px;
+    background-color: #111;
+}
+
+.plant{
+    grid-row: -1/-4;
+    grid-column: 9/11;
     position: relative;
     top: 35px;
     background-color: #111;
@@ -37,8 +60,8 @@ body{
 }
 
 .pet{
-    grid-row: -3/-4;
-    grid-column: 25/27;
+    grid-row: -2/-4;
+    grid-column: 25/30;
     background-color: #111;
 }
 
@@ -78,7 +101,7 @@ body{
     }
 
     .pet{
-        grid-column: -12/-14
+        grid-column: -12/-17
     }
 }
 
@@ -92,6 +115,6 @@ body{
     }
 
     .pet{
-        grid-column: 12/14;
+        grid-column: 9/14;
     }
 }
