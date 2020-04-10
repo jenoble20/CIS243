@@ -5,8 +5,13 @@ body{
     font-family: 'Balloo 2', sans-serif;
 }
 
+.clickable:hover{
+    cursor: pointer;
+}
+
+/*This css is just to align the placeholder labels in each item*/
 .bookshelf,
-.plant
+.plant,
 .window,
 .pet,
 .scheduler,
@@ -94,7 +99,6 @@ body{
 }
 
 /*Responsive positioning styles*/
-
 @media (max-width: 1625px){
     .notepad{
         grid-column: -16/-18;
