@@ -122,3 +122,19 @@ body{
         grid-column: 9/14;
     }
 }
+
+#pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(100,100,100,0.5);
+    color: black;
+}
+
+.pop-content{
+    background-color: rgba(255,255,255,1);
+}

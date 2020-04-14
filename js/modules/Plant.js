@@ -11,20 +11,13 @@ import Asset from "./Asset.js";
  * @param {string} text Placeholder text
  * 
  */
- class Bookshelf extends Asset{
-    /**@constructor 
-     *
-    */
-    
-    constructor(targetWindow, text){
+class Plant extends Asset {
+    /**@constructor*/
+    constructor(targetWindow, text) {
         super(targetWindow);
         this.text = text;
     }
-
-    logText(){
-        console.log(this.text);
-    }
- }
+}
 
 
- export {Bookshelf as default};
+export {Plant as default};
