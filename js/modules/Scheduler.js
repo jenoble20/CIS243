@@ -12,11 +12,7 @@ import Asset from "./Asset.js";
  * 
  */
 class Scheduler extends Asset {
-    /**@constructor*/
-    constructor(targetWindow, text) {
-        super(targetWindow);
-        this.text = text;
-    }
+
 }
 
 

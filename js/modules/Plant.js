@@ -12,11 +12,6 @@ import Asset from "./Asset.js";
  * 
  */
 class Plant extends Asset {
-    /**@constructor*/
-    constructor(targetWindow, text) {
-        super(targetWindow);
-        this.text = text;
-    }
 }
 
 

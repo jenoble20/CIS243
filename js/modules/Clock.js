@@ -12,11 +12,6 @@ import Asset from "./Asset.js";
  * 
  */
 class Clock extends Asset {
-    /**@constructor*/
-    constructor(targetWindow, text) {
-        super(targetWindow);
-        this.text = text;
-    }
 }
 
 

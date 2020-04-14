@@ -1,17 +1,19 @@
 
 /**
- * @class General asset representing an interactable object on the screen.
+ * @class General asset representing an interactable object on the screen. This object's properties and functions are inherited by any child class.
  */
 /**
   *
-  * @param {string} reference Reference name of the object
+  * 
   * @param {string} targetWindow Class or ID to target the appropriate pop-up window.
+  * @param {string} text Placeholder text for testing...
   */
 class Asset {
     
     /**@constructor*/
-    constructor(targetWindow) {
+    constructor(targetWindow, text) {
         this.targetWindow = targetWindow;
+        this.text = text;
     }
 
     setTargetWindow(newID){

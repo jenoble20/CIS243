@@ -12,18 +12,6 @@ import Asset from "./Asset.js";
  * 
  */
  class Bookshelf extends Asset{
-    /**@constructor 
-     *
-    */
-    
-    constructor(targetWindow, text){
-        super(targetWindow);
-        this.text = text;
-    }
-
-    logText(){
-        console.log(this.text);
-    }
  }
 
 
