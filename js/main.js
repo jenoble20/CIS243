@@ -12,15 +12,35 @@ import Pet from "./modules/Pet.js";
 $(document).ready(function(){
     initiateRoom();
 
+    //Clicking on an asset brings up it's pop-up window
     $(".clickable").click(function(){
         let object = $(this).data('obj');
-        $('#pop-up').find('h1').text(object.text);
-        $('#pop-up').css('display', 'flex');
+        $('#pop-up').append(object.getHTML());
+        $('#pop-up').removeClass('closed').addClass('open');
     });
-    
-    $('#pop-up').click(function(){
-        $(this).css('display', 'none');
+
+    //Close the pop-up
+    $('#pop-up').click(function(e){
+        if(e.target != this){
+            //Do nothing if a child is clicked
+        }else{
+            $(this).removeClass('open').addClass('closed');
+            $(this).empty();
+        }
     });
+
+
+    /*BROKEN FUNCTIONALITY*/
+    /*
+    $('.submit-button').click(function () {
+        console.log('Button Clicked');
+        let hourInput = $('.hour-input').val();
+        let minuteInput = $('.minute-input').val();
+        $(this).setDrinkReminder(hourInput, minuteInput);
+    });
+    */
+
+
 });
 
 
@@ -58,6 +78,6 @@ function initiateRoom() {
     $('.window').data('obj', newWindow);
 
     //pet
-    const newPet = new Pet('pet', 'This is a pet');
+    const newPet = new Pet('pet', 'This is a pet', 'Brody');
     $('.pet').data('obj', newPet);
 }

@@ -69,6 +69,12 @@ body{
     grid-column: 25/30;
     background-color: #111;
 }
+.speech-bubble {
+    grid-row: -4/-5;
+    grid-column: 28/32;
+    border-radius: 15px;
+    background-color: blue;
+}
 
 /*Table Styling*/
 #table {
@@ -123,18 +129,27 @@ body{
     }
 }
 
-#pop-up{
-    display: none;
+/*Pop-up window styling*/
+#pop-up {
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(100,100,100,0.5);
+    background-color: rgba(100, 100, 100, 0.5);
     color: black;
 }
 
-.pop-content{
-    background-color: rgba(255,255,255,1);
+#pop-up > div{
+    height: 500px;
+    width: 800px;
+}
+
+.open{
+    display: flex;
+}
+
+.closed{
+    display: none;
 }
