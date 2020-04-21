@@ -11,8 +11,8 @@ class Pet extends Asset {
     /**
      * @constructor
      */
-    constructor(targetWindow, text, name){
-        super(targetWindow, text);
+    constructor(name){
+        super();
         this.name = name;
         this.html = 
             `
@@ -30,10 +30,6 @@ class Pet extends Asset {
 
     getName(){
         return this.name;
-    }
-
-    getHTML(){
-        return this.html;
     }
 
     changeName(newName){

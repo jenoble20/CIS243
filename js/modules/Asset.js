@@ -11,18 +11,13 @@
 class Asset {
     
     /**@constructor*/
-    constructor(targetWindow, text) {
-        this.targetWindow = targetWindow;
-        this.text = text;
-    }
-
-    setTargetWindow(newID){
-        this.targetWindow = newID;
-        return this.targetWindow;
-    }
-
-    getTargetWindow(path){
-        return this.targetWindow;
+    constructor() {
+        this.error = 
+            `
+                <div class = "pet content">
+                    <h1>Error: No content found.</h1>
+                </div>
+            `
     }
 
     /**
@@ -38,6 +33,17 @@ class Asset {
         time.setSeconds(0);
         time.setMilliseconds(0);
         return time;
+    }
+
+
+    /*Constructs the HTML to be displayed on the screen.*/
+    getHTML(){
+        if(this.html){
+            return this.html;
+        }else{
+            return this.error;
+        }
+        
     }
 }
 

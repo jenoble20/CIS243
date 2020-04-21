@@ -8,6 +8,17 @@ import Asset from "./Asset.js";
 
 
 class Notepad extends Asset {
+
+    /**
+     * @constructor
+    */
+    constructor(){
+        
+    }
+
+    addNote(){
+
+    }
 }
 
 
