@@ -10,7 +10,14 @@ import Pet from "./modules/Pet.js";
 
 
 $(document).ready(function(){
-    initiateRoom();
+    const DATE = new Date();
+    const HOUR = DATE.getHours();
+    const MINUTE = DATE.getMinutes();
+    const SECOND = DATE.getSeconds();
+    const DAY = DATE.getDay();
+    const MONTH = DATE.getMonth();
+    const YEAR = DATE.getFullYear();
+    initiateRoom(DATE);
 
     //Clicking on an asset brings up it's pop-up window
     $(".clickable").click(function(){
@@ -52,7 +59,7 @@ $(document).ready(function(){
 /**
  * This function creates initial values for the site. It constructs the data objects, as well as tie those objects to the proper html elements.
  */
-function initiateRoom() {
+function initiateRoom(date) {
     //Bookshelf
     const newShelf = new Bookshelf('bookshelf', 'This is a bookshelf');
     $('.bookshelf').data('obj', newShelf);
@@ -76,6 +83,8 @@ function initiateRoom() {
     //window
     const newWindow = new Window('window', 'This is a window');
     $('.window').data('obj', newWindow);
+    newWindow.setColor(date.getHours());
+    $('.window').css('background-color', newWindow.getColor());
 
     //pet
     const newPet = new Pet('pet', 'This is a pet', 'Brody');

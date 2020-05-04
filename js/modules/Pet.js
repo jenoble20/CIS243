@@ -16,7 +16,8 @@ class Pet extends Asset {
         this.name = name;
         this.html = 
             `
-                <div class="pet content">
+                <div class="content">
+                    <h1>When would you like me to remind you to get a drink?</h1>
                     <form>
                         <input class="hour-input" type="text" placeholder="hour"></input>
                         <input class="minute-input" type="text" placeholder="minute"></input>

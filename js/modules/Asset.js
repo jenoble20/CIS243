@@ -14,7 +14,7 @@ class Asset {
     constructor() {
         this.error = 
             `
-                <div class = "pet content">
+                <div class = "error content">
                     <h1>Error: No content found.</h1>
                 </div>
             `

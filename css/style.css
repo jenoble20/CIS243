@@ -11,15 +11,21 @@ body{
 
 /*This css is just to align the placeholder labels in each item*/
 .bookshelf,
-.plant,
+.pot,
 .window,
 .pet,
 .scheduler,
 .notepad,
 .clock{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 /*Wall styling*/
@@ -40,7 +46,7 @@ body{
     background-color: #111;
 }
 
-.plant{
+.pot{
     grid-row: -1/-4;
     grid-column: 9/11;
     position: relative;
@@ -51,7 +57,22 @@ body{
 .window{
     grid-row: 3/8;
     grid-column: -7/-12;
+    background-color: #FFF;
+    border: 10px solid #111;
+}
+
+.window:before,
+.window:after {
+    content: '';
+    width: 100%;
+    height: 10px;
     background-color: #111;
+    position: relative;
+    z-index: 10;
+}
+.window:after {
+    transform: rotate(90deg);
+    bottom: 5px;
 }
 
 /*Floor Styling*/
@@ -156,4 +177,12 @@ body{
 
 .closed{
     display: none;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
 }
